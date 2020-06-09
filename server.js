@@ -1,11 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const morgan = require("morgan");
+const mongojs = require("mongojs");
+
 
 const app = express();
 
-const databaseUrl = "workouts";
-const collections = ["exercises"]
+const databaseUrl = "gym";
+const collections = ["Workout"]
 
 const db = mongojs(databaseUrl, collections);
 
